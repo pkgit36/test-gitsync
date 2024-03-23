@@ -5,7 +5,7 @@
     type = "file"
     include = ["/git/vector/pipelines/jenkins/jenkins-log.txt"]
 
-[sinks.jenkins]
+[sinks.jenkins_1]
     type = "console"
     inputs = ["jenkins"]
     target = "stdout"
