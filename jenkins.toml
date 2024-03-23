@@ -1,0 +1,12 @@
+[log_schema]
+    timestamp_key = "@timestamp"
+
+[sources.jenkins]
+    type = "file"
+    include = ["/git/vector/pipelines/jenkins/jenkins-log.txt"]
+
+[sinks.jenkins]
+    type = "console"
+    inputs = ["jenkins"]
+    target = "stdout"
+    encoding.codec = "json"  # Adjust the encoding according to your requirementsi
